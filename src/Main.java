@@ -178,8 +178,28 @@ public class Main {
                         }
                 }
             }
+        System.out.println("   ");
 
-
+        System.out.println("Задание 9");
+        //Задание 3
+        //Даны три числа:
+        //int one;
+        //int two;
+        //int free;
+        //С помощью условного оператора и конструкции else напишите программу, которая вычисляет,
+        // какое из трех чисел бОльшее и выводит результат в консоль.
+        int one=1;
+        int two=2;
+        int free=3;
+        if (one>two&&one>free){
+            System.out.println("Самое большое число 'one'= "+one);
+        }else {
+            if (two>one&&two>free){
+                System.out.println("Самое большое число 'two'= "+two);
+            }else {
+                System.out.println("Самое большое число 'free'= "+free);
+            }
+        }
         System.out.println("   ");
     }
 }
