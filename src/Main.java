@@ -43,6 +43,21 @@ public class Main {
         // Вагон рассчитан на 60 сидячих мест, все остальные – стоячие.
         //Напишите программу, которая выводит в консоль сообщение о том,
         // есть ли место в вагоне: сидячее или стоячее или вагон уже полностью забит.
+        byte totalVanPlace=102;
+        byte sedentaryVan=60;
+        byte stendingVan= (byte) (totalVanPlace-sedentaryVan);
+        byte numberVan=30;
+        if (numberVan<=sedentaryVan) {
+            System.out.println("В вагоне свободно: "+(sedentaryVan-numberVan)+" сидячих мест, и "+stendingVan+" стояичих мест.");
+        }
+        if (numberVan>sedentaryVan) {
+            if (numberVan < totalVanPlace) {
+                System.out.println("В вагоне свободно: " + (totalVanPlace - numberVan) + " стоячих мест.");
+            }
+        }
+        if (numberVan>=totalVanPlace) {
+            System.out.println("В вагоне нет свободных мест.");
+        }
         System.out.println("   ");
 
     }
