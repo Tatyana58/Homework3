@@ -60,6 +60,7 @@ public class Main {
         }
         System.out.println("   ");
 
+        System.out.println("Домашняя работа № 2 - УСЛОВНЫЕ ОПЕРАТОРЫ IF... ELSE... ");
         System.out.println("Задание 4");
         //Домашнее задание - 2
         //Задание 1
@@ -95,6 +96,30 @@ public class Main {
                            }
                     }
                 }
+        System.out.println("   ");
+
+
+        System.out.println("Задание 6");
+        //Задание 3
+        //Вместимость одного вагона поезда составляет 102 человека.
+        // Вагон рассчитан на 60 сидячих мест, все остальные – стоячие.
+        //С помощью условного оператора и конструкции else перепишите программу,
+        // которая выводит в консоль сообщение о том, есть ли место в вагоне:
+        // сидячее или стоячее или вагон уже полностью забит.
+
+        byte totalVanPlace6=102;
+        byte sedentaryVan6=60;
+        byte stendingVan6= (byte) (totalVanPlace-sedentaryVan);
+        byte numberVan6=90;
+        if (numberVan6>=totalVanPlace6) {
+            System.out.println("В вагоне нет свободных мест.");
+        }else {
+            if ((numberVan6>sedentaryVan6)&&(numberVan6<totalVanPlace6)) {
+                    System.out.println("В вагоне свободно: " + (totalVanPlace6 - numberVan6) + " стоячих мест.");
+                }else {
+                System.out.println("В вагоне свободно: "+(sedentaryVan6-numberVan6)+" сидячих мест, и "+stendingVan6+" стояичих мест.");
+                      }
+              }
         System.out.println("   ");
     }
 }
