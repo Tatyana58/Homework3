@@ -1,5 +1,5 @@
 public class Main {
-    public static void main(String[] args) {System.out.println("Домашняя работа УСЛОВНЫЕ ОПЕРАТОРЫ");
+    public static void main(String[] args) {System.out.println("Домашняя работа № 1 - УСЛОВНЫЕ ОПЕРАТОРЫ");
         System.out.println("Задание 1");
         //Задание 1
         //С помощью условного оператора напишите программу, которая выводит в консоль:
@@ -22,16 +22,12 @@ public class Main {
         //человек уже закончил школу и может отправляться в университет, если его возраст 18 и больше;
         //человек окончил университет и ему пора искать первую работу, если ему 24 и больше лет.
         byte ageBaby=26;
-       if (ageBaby >= 7) {
-           if (ageBaby < 18) {
+       if (ageBaby >= 7&&ageBaby < 18) {
                System.out.println("Ребенок ходит в школу. ");
            }
-       }
-           if (ageBaby >= 18) {
-               if (ageBaby < 24) {
+           if (ageBaby >= 18&&ageBaby < 24) {
                    System.out.println("Человек уже закончил школу и может отправляться в университет.");
                }
-           }
            if (ageBaby >= 24) {
                System.out.println("Человек окончил университет и ему пора искать первую работу.");
            }
@@ -43,20 +39,19 @@ public class Main {
         // Вагон рассчитан на 60 сидячих мест, все остальные – стоячие.
         //Напишите программу, которая выводит в консоль сообщение о том,
         // есть ли место в вагоне: сидячее или стоячее или вагон уже полностью забит.
-        byte totalVanPlace=102;
-        byte sedentaryVan=60;
-        byte stendingVan= (byte) (totalVanPlace-sedentaryVan);
-        byte numberVan=30;
-        if (numberVan<=sedentaryVan) {
-            System.out.println("В вагоне свободно: "+(sedentaryVan-numberVan)+" сидячих мест, и "+stendingVan+" стояичих мест.");
-        }
-        if (numberVan>sedentaryVan) {
-            if (numberVan < totalVanPlace) {
-                System.out.println("В вагоне свободно: " + (totalVanPlace - numberVan) + " стоячих мест.");
-            }
-        }
-        if (numberVan>=totalVanPlace) {
+        byte totalVanPlace=102;                                // всего мест
+        byte sedentaryTotalVan=60;                                  //сидячие места в вагоне
+        byte stendingTotalVan= (byte) (totalVanPlace-sedentaryTotalVan); // Стоячие места в вагоне
+        byte numberStVan=42;                                    //занято стоячих мест
+        byte numberSedVan=31;                                    // занято сидячих мест
+        if (numberStVan>=stendingTotalVan&&numberSedVan>=sedentaryTotalVan) {
             System.out.println("В вагоне нет свободных мест.");
+        }if (numberStVan<stendingTotalVan&&numberSedVan<sedentaryTotalVan) {
+            System.out.println("В вагоне свободно: "+(sedentaryTotalVan-numberSedVan)+" сидячих мест, и "+(stendingTotalVan-numberStVan)+" стоячих мест.");
+        }if (numberStVan<stendingTotalVan&&numberSedVan>=sedentaryTotalVan) {
+                System.out.println("В вагоне свободно: " + (stendingTotalVan - numberStVan) + " стоячих мест и сидячих мест нет.");
+        }if (numberSedVan<sedentaryTotalVan&&numberStVan>=stendingTotalVan) {
+            System.out.println("В вагоне свободно: " + (sedentaryTotalVan-numberSedVan) + " сидячих мест и стоячих мест нет.");
         }
         System.out.println("   ");
 
@@ -106,23 +101,18 @@ public class Main {
         //С помощью условного оператора и конструкции else перепишите программу,
         // которая выводит в консоль сообщение о том, есть ли место в вагоне:
         // сидячее или стоячее или вагон уже полностью забит.
-
-        byte totalVanPlace6=102;
-        byte sedentaryVan6=60;
-        byte stendingVan6= (byte) (totalVanPlace-sedentaryVan);
-        byte numberVan6=90;
-        if (numberVan6>=totalVanPlace6) {
+        if (numberStVan>=stendingTotalVan&&numberSedVan>=sedentaryTotalVan) {
             System.out.println("В вагоне нет свободных мест.");
-        }else {
-            if ((numberVan6>sedentaryVan6)&&(numberVan6<totalVanPlace6)) {
-                    System.out.println("В вагоне свободно: " + (totalVanPlace6 - numberVan6) + " стоячих мест.");
-                }else {
-                System.out.println("В вагоне свободно: "+(sedentaryVan6-numberVan6)+" сидячих мест, и "+stendingVan6+" стояичих мест.");
-                      }
-              }
+        }else if(numberStVan<stendingTotalVan&&numberSedVan<sedentaryTotalVan) {
+            System.out.println("В вагоне свободно: " + (sedentaryTotalVan - numberSedVan) + " сидячих мест, и " + (stendingTotalVan - numberStVan) + " стоячих мест.");
+        }else if (numberStVan<stendingTotalVan&&numberSedVan>=sedentaryTotalVan) {
+            System.out.println("В вагоне свободно: " + (stendingTotalVan - numberStVan) + " стоячих мест и сидячих мест нет.");
+        }if(numberSedVan<sedentaryTotalVan&&numberStVan>=stendingTotalVan) {
+            System.out.println("В вагоне свободно: " + (sedentaryTotalVan-numberSedVan) + " сидячих мест и стоячих мест нет.");
+        }
         System.out.println("   ");
 
-        System.out.println("Домашнее задание №3 ");
+        System.out.println("Домашнее задание №3 - УСЛОВНЫЕ ОПЕРАТОРЫ  '==' , '!=' , '&&' и '||' ");
         System.out.println("Задание 7");
         //Задание 1
         //Напишите программу, которая помогает определить
@@ -133,7 +123,7 @@ public class Main {
         //А если человеку больше 24, то ему пора ходить на работу
         //При выполнении каждого условия программа должна выводить в консоль сообщение в формате :
         // "Если возраст человека равен … , то ему нужно ходить … (в зависимости от возраста дописать нужное)"
-        byte ageMen=5;
+        byte ageMen=26;
         if (ageMen>=2 && ageMen<=6){
             System.out.println("Если возраст человека равен "+ageMen+", то ему нужно ходить в детский сад. ");
         }else {
